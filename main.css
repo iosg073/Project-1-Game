@@ -1,0 +1,35 @@
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-between;
+    
+
+}
+#a3{
+    display: flex;
+    justify-content: flex-start;
+    /* margin-left: auto; */
+    flex:2
+
+}
+#a1,#a2{
+    margin-left: 20px;
+
+}
+#divId{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    
+}
+main{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+}
+main >  div{
+    flex:2
+
+}
