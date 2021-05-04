@@ -1,35 +1,108 @@
 
+html, body{
+    height: 100%;
+}
+
 header{
     display: flex;
-    justify-content: flex-start;
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-between; */
     
 
 }
-#a3{
-    display: flex;
-    justify-content: flex-start;
-    /* margin-left: auto; */
-    flex:2
 
-}
-#a1,#a2{
-    margin-left: 20px;
-
-}
 #divId{
     display: flex;
     justify-content: space-around;
-    width: 25%;
+    flex: 1;
+    background-color: rgb(244, 244, 250);
+   height: 30px;
     
 }
+
 main{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+    height: 90%;
     /* align-items: center; */
 
 }
-main >  div{
-    flex:2
 
+.mainarea{
+    display: flex;
+    flex:1;
+    /* background-color:green; */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* height: 600px; */
+
+}
+.txtfield{
+   margin-bottom : 40px;
+   margin-top: 20px; 
+}
+
+
+label{
+    margin-right: 15px;
+    background-color: gray;
+    border: rgb(58, 57, 57) solid 1px;
+    padding: 3px 2px 3px 10px;
+    width: 400px;
+}
+.keyBoard{
+    display:flex;
+    margin-top: 20px; 
+    align-items:center;
+    justify-content: space-evenly;
+    width: 200.5px;
+    height: 130px;
+    /* background-color:black; */
+    flex-wrap: wrap;
+    border: solid black 2px;
+    /* flex: 1; */
+   
+    /* flex-flow: row; */
+}
+.letter-button{
+    margin: 4px;
+    border-bottom: dimgrey solid 1px;
+    padding: 2px 4px 2px 4px;
+}
+#txtField-margin{
+    margin-bottom:20px ;
+    /* flex: 4; */
+}
+.button {
+    background-color: gray; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .buttonDiv{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100px;
+      width: 300px;
+      background-color: rgb(231, 240, 231);
+  }
+.asid-left{
+    width: 150px;
+    background-color: pink;
+}
+.asid-right{
+    width: 150px;
+    background-color: gray;
+    
 }
