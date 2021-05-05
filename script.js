@@ -12,17 +12,50 @@ btn.addEventListener('click', function(){
     domtxt=document.getElementById('txtword')
     worldEnter=domtxt.value
 
+
+    worldLength=worldEnter.length;
+    console.log(worldLength)
+
+    let counter=0;
+
     txtboxDisap=document.getElementById('domtry');
     txtboxDisap.style.display= 'none';
     btnBox=document.querySelector('.buttonDiv');
     btnBox.style.display= 'none';
     mainBox=document.querySelector('.mainarea');
     console.log(mainBox)
+
     let keyA=document.getElementById('buttonA');
+    let keyB=document.getElementById('buttonB');
+    let keyC=document.getElementById('buttonC');
+    let keyD=document.getElementById('buttonD');
+    let keyE=document.getElementById('buttonE');
+    let keyF=document.getElementById('buttonF');
+    let keyG=document.getElementById('buttonG');
+    let keyH=document.getElementById('buttonH');
+    let keyI=document.getElementById('buttonI');
+    let keyJ=document.getElementById('buttonJ');
+    let keyK=document.getElementById('buttonK');
+    let keyL=document.getElementById('buttonL');
+    let keyM=document.getElementById('buttonM');
+    let keyN=document.getElementById('buttonN');
+    let keyO=document.getElementById('buttonO');
+    let keyP=document.getElementById('buttonP');
+    let keyQ=document.getElementById('buttonQ');
+    let keyR=document.getElementById('buttonR');
+    let keyS=document.getElementById('buttonS');
+    let keyT=document.getElementById('buttonT');
+    let keyU=document.getElementById('buttonU');
+    let keyV=document.getElementById('buttonV');
+    let keyW=document.getElementById('buttonW');
+    let keyX=document.getElementById('buttonX');
+    let keyY=document.getElementById('buttonY');
+    let keyZ=document.getElementById('buttonZ');
 
     
    
-    for (let i=0;i<worldEnter.length;i++){
+    for (let i=0;i<worldEnter.length;i++)
+    {
         let divNew=document.createElement('div');
         text = document.createTextNode(' ');
         divNew.appendChild(text);
@@ -36,18 +69,182 @@ btn.addEventListener('click', function(){
 
 keyA.addEventListener('click',function(){
     key='a';
-    document.querySelector('.inputHolder').innerHTML='a';
-    // text = document.createTextNode(key);
-    // console.log(worldEnter.length);
-    // for (let i=0;i<worldEnter.length;i++){
-    //     let divNew=document.createElement('div');
-    //     // text = document.createTextNode(key);
-    //     divNew.appendChild(text);
-    //     divNew.classList.add('inputHolder');
-    //     mainBox.parentNode.insertBefore(divNew,mainBox.nextSibling)
-        // btnBox.insertAdjacentHTM('beforebegin','divNew')
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
     console.log(key)
 })
+
+keyB.addEventListener('click',function(){
+    key='b';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+keyC.addEventListener('click',function(){
+    key='c';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyD.addEventListener('click',function(){
+    key='d';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+
+keyE.addEventListener('click',function(){
+    key='e';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyF.addEventListener('click',function(){
+    key='f';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+keyG.addEventListener('click',function(){
+    key='g';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyH.addEventListener('click',function(){
+    key='h';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyI.addEventListener('click',function(){
+    key='i';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyJ.addEventListener('click',function(){
+    key='j';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+keyK.addEventListener('click',function(){
+    key='k';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyL.addEventListener('click',function(){
+    key='l';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyM.addEventListener('click',function(){
+    key='m';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyN.addEventListener('click',function(){
+    key='n';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+keyO.addEventListener('click',function(){
+    key='o';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyP.addEventListener('click',function(){
+    key='p';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyQ.addEventListener('click',function(){
+    key='q';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyR.addEventListener('click',function(){
+    key='r';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+keyS.addEventListener('click',function(){
+    key='s';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyT.addEventListener('click',function(){
+    key='t';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyU.addEventListener('click',function(){
+    key='u';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyV.addEventListener('click',function(){
+    key='v';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+keyW.addEventListener('click',function(){
+    key='w';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyX.addEventListener('click',function(){
+    key='x';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+
+keyY.addEventListener('click',function(){
+    key='y';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
+keyZ.addEventListener('click',function(){
+    key='z';
+    tt=document.getElementsByClassName('inputHolder')
+    tt[counter++].innerHTML=key;
+    console.log(key)
+})
+
     // console.log(worldEnter.length);
     // for (let i=0;i<worldEnter.length;i++){
     //     let divNew=document.createElement('div');

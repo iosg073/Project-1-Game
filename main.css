@@ -73,6 +73,15 @@ label{
     border-bottom: dimgrey solid 1px;
     padding: 2px 4px 2px 4px;
 }
+.letter{
+
+    margin: 4px;
+    border-bottom: dimgrey solid 1px;
+    padding: 2px 4px 2px 4px;
+}
+
+
+
 #txtField-margin{
     margin-bottom:20px ;
     /* flex: 4; */
@@ -113,11 +122,12 @@ label{
     direction:row;
     justify-content: center; */
     order: -1;
-    width: 4px;
+    width: 6px;
     height:10px;
     /* background-color: indianred; */
-    border-bottom: maroon solid 4px;
-    /* margin-left: 600px; */
+    border-bottom: maroon solid 2px;
+    margin-left: 6px;
     padding:6px;
     align-self: flex-start;
+
 }
