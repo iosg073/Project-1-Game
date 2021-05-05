@@ -23,27 +23,28 @@
 
 
     <main>
-        <aside class="asid-left"></aside>
+        <!-- <aside class="asid-left"></aside> -->
         <div class='mainarea'>
 
             <div id='txtField-margin' style="width: 600px; height:250px; background-color:gray;">abc</div>
 
-            <div >
+            <div id="domtry">
+                
 
                     <label for='tname' class='txtfield' > Enter Word: </label>   
-                    <input type="tex" class='txtfield' placeholder=" Enter your word " name="tname">
+                    <input type="tex" id="txtword" class='txtfield' placeholder=" Enter your word " name="tname">
 
             </div>
 
             <div class="buttonDiv" >
-                    <button class="buttonMnu">  Submit a word  </button >
+                    <button class="buttonMnu" id="btnSubmit1">  Submit a word  </button >
                     <button class="buttonMnu"> Get random word </button >
                     <button class="buttonMnu"> Reset </button >
             </div>
 
 
             <div class="keyBoard" >
-                    <div class="letter-button">A</div>
+                    <div id="buttonA">A</div>
                     <div class="letter-button">B</div>
                     <div class="letter-button">C</div>
                     <div class="letter-button">D</div>
@@ -71,7 +72,7 @@
                     <div class="letter-button">Z</div>
             </div>
          </div>
-        <aside class=" asid-right"></aside>
+        <!-- <aside class=" asid-right"></aside> -->
     
     </main>
 
@@ -80,6 +81,6 @@
 
     </footer>
     
-    <!-- <script src = 'script.js'></script> -->
+    <script src = 'script.js'></script>
 </body>
 </html>
