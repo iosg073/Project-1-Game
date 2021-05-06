@@ -10,6 +10,9 @@ let totalChances=8;
 let c=0;
 document.querySelector('.keyBoard').style.display='none';
 // document.getElementById('lbl').style.display='none';
+document.getElementById('btnreset').addEventListener('click', function(){
+    location.reload();   
+})
 
 
 btnSubmit.addEventListener('click', function()
@@ -17,7 +20,8 @@ btnSubmit.addEventListener('click', function()
         event.preventDefault()
         domtxt=document.getElementById('txtword')
         worldEnter=domtxt.value
-        domtxt.value="Guess the word!"
+        domtxt.value=''
+        domtxt.style.placeholder="Guess the word!"
 
 
         worldLength=worldEnter.length;
@@ -90,6 +94,8 @@ btnSubmit.addEventListener('click', function()
                         {
                         btnBox.style.display='flex'
                         totalChances=8;
+                        alert('Ready to hang')
+                        location.reload();
                         }   
                         document.getElementById('lbl').innerHTML=`Chances Remaining: ${totalChances}`;
                     } else
@@ -115,7 +121,13 @@ btnSubmit.addEventListener('click', function()
                                 if(c===worldEnter.length)
                                 {
                                     btnBox.style.display='flex'
+                                    document.querySelector('.keyBoard').style.display='none';
+                                    
                                     divwraper.style.display='none'
+                                    c=0;
+                                    totalChances=8;
+                                    location.reload();
+
                                    
                                 }
                                 console.log(domtxt);
