@@ -128,7 +128,7 @@ label{
     margin-bottom:30px ;
     order: -1;
     height: 55%;
-    /* background-image: url('hang.jpg'); */
+    background-image: url('hang.jpg');
     /* flex: 4; */
 }
 
