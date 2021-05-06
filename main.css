@@ -43,15 +43,18 @@ main{
 .txtfield{
    margin-bottom : 10px;
    margin-top: 10px; 
+  height: 16px;
+  padding: 2px 2px 2px 2px;
 }
 
 
 label{
-    margin-right: 15px;
-    background-color: gray;
-    border: rgb(58, 57, 57) solid 1px;
-    padding: 3px 2px 3px 10px;
+    margin-right: 8px;
+    background-color: rgb(231, 229, 229);
+    /* border: rgb(80, 78, 78) solid 1px; */
+    padding: 2px 2px 2px 2px;
     width: 400px;
+    height: 20px;
 }
 .keyBoard{
     display:flex;
@@ -104,7 +107,7 @@ label{
       align-items: center;
       justify-content: space-evenly;
       height: 100px;
-      width: 300px;
+      width: 298px;
       background-color: rgb(231, 240, 231);
   }
 .asid-left{
@@ -130,4 +133,9 @@ label{
     padding:6px;
     align-self: flex-start;
 
+}
+.flexContainer{
+    display: flex;
+    margin-bottom: 30px;
+    background-color:rgb(231, 240, 231) ;
 }

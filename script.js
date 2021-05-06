@@ -1,93 +1,131 @@
 
 // let name1=prompt( 'what is your name ');
-let worldEnter='abv';
-
-let btn=document.getElementById('btnSubmit1')
-console.log(btn)
+// let worldEnter='abv';
 
 
+let btnSubmit=document.getElementById('btnSubmit1')
+// console.log(btn)
+let totalScore=0;
+let totalChances=8;
+let c=0;
+document.querySelector('.keyBoard').style.display='none';
+// document.getElementById('lbl').style.display='none';
 
-btn.addEventListener('click', function(){
-    event.preventDefault()
-    domtxt=document.getElementById('txtword')
-    worldEnter=domtxt.value
+
+btnSubmit.addEventListener('click', function()
+    {
+        event.preventDefault()
+        domtxt=document.getElementById('txtword')
+        worldEnter=domtxt.value
+        domtxt.value="Guess the word!"
 
 
-    worldLength=worldEnter.length;
-    console.log(worldLength)
+        worldLength=worldEnter.length;
+        console.log(worldLength)
 
-    let counter=0;
+        let counter=0;
+        document.querySelector('.keyBoard').style.display='flex';
+        // document.getElementById('lbl').style.display='flex';
+        txtboxDisap=document.getElementById('domtry');
+        // txtboxDisap.style.display= 'none';
+        btnBox=document.querySelector('.buttonDiv');
+        btnBox.style.display= 'none';
+        mainBox=document.querySelector('.mainarea');
+        console.log(btnBox)
 
-    txtboxDisap=document.getElementById('domtry');
-    txtboxDisap.style.display= 'none';
-    btnBox=document.querySelector('.buttonDiv');
-    btnBox.style.display= 'none';
-    mainBox=document.querySelector('.mainarea');
-    console.log(mainBox)
-
-    let keyA=document.getElementById('buttonA');
-    let keyB=document.getElementById('buttonB');
-    let keyC=document.getElementById('buttonC');
-    let keyD=document.getElementById('buttonD');
-    let keyE=document.getElementById('buttonE');
-    let keyF=document.getElementById('buttonF');
-    let keyG=document.getElementById('buttonG');
-    let keyH=document.getElementById('buttonH');
-    let keyI=document.getElementById('buttonI');
-    let keyJ=document.getElementById('buttonJ');
-    let keyK=document.getElementById('buttonK');
-    let keyL=document.getElementById('buttonL');
-    let keyM=document.getElementById('buttonM');
-    let keyN=document.getElementById('buttonN');
-    let keyO=document.getElementById('buttonO');
-    let keyP=document.getElementById('buttonP');
-    let keyQ=document.getElementById('buttonQ');
-    let keyR=document.getElementById('buttonR');
-    let keyS=document.getElementById('buttonS');
-    let keyT=document.getElementById('buttonT');
-    let keyU=document.getElementById('buttonU');
-    let keyV=document.getElementById('buttonV');
-    let keyW=document.getElementById('buttonW');
-    let keyX=document.getElementById('buttonX');
-    let keyY=document.getElementById('buttonY');
-    let keyZ=document.getElementById('buttonZ');
+        let keyA=document.getElementById('buttonA');
+        let keyB=document.getElementById('buttonB');
+        let keyC=document.getElementById('buttonC');
+        let keyD=document.getElementById('buttonD');
+        let keyE=document.getElementById('buttonE');
+        let keyF=document.getElementById('buttonF');
+        let keyG=document.getElementById('buttonG');
+        let keyH=document.getElementById('buttonH');
+        let keyI=document.getElementById('buttonI');
+        let keyJ=document.getElementById('buttonJ');
+        let keyK=document.getElementById('buttonK');
+        let keyL=document.getElementById('buttonL');
+        let keyM=document.getElementById('buttonM');
+        let keyN=document.getElementById('buttonN');
+        let keyO=document.getElementById('buttonO');
+        let keyP=document.getElementById('buttonP');
+        let keyQ=document.getElementById('buttonQ');
+        let keyR=document.getElementById('buttonR');
+        let keyS=document.getElementById('buttonS');
+        let keyT=document.getElementById('buttonT');
+        let keyU=document.getElementById('buttonU');
+        let keyV=document.getElementById('buttonV');
+        let keyW=document.getElementById('buttonW');
+        let keyX=document.getElementById('buttonX');
+        let keyY=document.getElementById('buttonY');
+        let keyZ=document.getElementById('buttonZ');
 
     
-   
+        let divwraper=document.createElement('div');
     for (let i=0;i<worldEnter.length;i++)
     {
         let divNew=document.createElement('div');
         text = document.createTextNode(' ');
         divNew.appendChild(text);
         divNew.classList.add('inputHolder');
-        mainBox.parentNode.insertBefore(divNew,mainBox.nextSibling)
+       divwraper.append(divNew)
     }
 
+    divwraper.classList.add("flexContainer")
+    mainBox.prepend(divwraper)
    
     const wordGetter= function(eventObj)
-{
-    eventObj.preventDefault();
-    
+                    {
+                    eventObj.preventDefault();
 
-    // console.log(worldEnter.indexOf(key))
-    for(let i=0;i<worldEnter.length;i++)
-    {
-        if(worldEnter.indexOf(eventObj.target.textContent.toLowerCase())>-1)
-            {
-                tt=document.getElementsByClassName('inputHolder')
-                tt[worldEnter.indexOf(eventObj.target.textContent.toLowerCase())].innerHTML=eventObj.target.textContent.toLowerCase();
-                worldEnter=worldEnter.replace(eventObj.target.textContent.toLowerCase(), "%");
-                console.log(worldEnter);
-            }
-    }
-    console.log(eventObj.target.textContent.toLowerCase())
-    console.log(worldEnter);
-    console.log(worldEnter.indexOf(eventObj.target.textContent.toLowerCase()))
-}
-    
+                    if(worldEnter.indexOf(eventObj.target.textContent.toLowerCase())<0)
+                    {
+                      totalChances--;
+                      
+                      eventObj.target.style.visibility='hidden';
+                     
+                     
+                    //   txtboxDisap.className='';
+                    if(totalChances==0)
+                        {
+                        btnBox.style.display='flex'
+                        totalChances=8;
+                        }   
+                        document.getElementById('lbl').innerHTML=`Chances Remaining: ${totalChances}`;
+                    } else
+                    {
+                        eventObj.target.style.color='red'
+                      eventObj.target.style.border='red'
+                    }        
+
+                     // console.log(worldEnter.indexOf(key))
+                    for(let i=0;i<worldEnter.length;i++)
+                          {
+                            if(worldEnter.indexOf(eventObj.target.textContent.toLowerCase())>-1)
+                                 {
+                                    tt=document.getElementsByClassName('inputHolder')
+                                    tt[worldEnter.indexOf(eventObj.target.textContent.toLowerCase())].innerHTML=eventObj.target.textContent.toLowerCase();
+                                    worldEnter=worldEnter.replace(eventObj.target.textContent.toLowerCase(), "%");
+                                    console.log(worldEnter);
+                                    c++;
+                                 }
+                          }
+                         
+                                // console.log(eventObj.target.textContent.toLowerCase())
+                                if(c===worldEnter.length)
+                                {
+                                    btnBox.style.display='flex'
+                                    divwraper.style.display='none'
+                                   
+                                }
+                                console.log(domtxt);
+                                // console.log(worldEnter.indexOf(eventObj.target.textContent.toLowerCase()))
+                            }
+                                
 
 
-keyA.addEventListener('click',wordGetter);//){
+keyA.addEventListener('click',wordGetter);
+//){
     // key='a'
     
     // console.log(worldEnter.indexOf(key))
@@ -345,70 +383,6 @@ keyY.addEventListener('click',wordGetter)
 // })
 
 keyZ.addEventListener('click',wordGetter)
-// {
-//     key='z';
-// console.log(worldEnter.indexOf(key))
-//     if(worldEnter.indexOf(key)>-1)
-//         {
-//             tt=document.getElementsByClassName('inputHolder')
-//             tt[worldEnter.indexOf(key)].innerHTML=key;
-//         }
-//     console.log(worldEnter)
-    
-    // b=Array.from(worldEnter)
-    // c=b
-    // // console.log(c.toString())
-    // // console.log(c)
-    // // console.log(b)
-    // // const tt=c.toString()
-    // let totalChoices=3;
-    // let holder=[]
-    // let position=[]
-    // let h=[]
-    // count =b.length;
-
-
-    // for(let i=0; i<2+b.length; i++ )
-    //     {
-    //         // str=prompt(' Enter Letter to gues')
-    //         // h.push(str)
-
-    //         for(let j=0;j<b.length;j++)
-    //             if(str===b[j])
-    //                             {
-    //                                 holder[j]=str;
-    //                                 b[j]='~';
-    //                                 count--;
-    //                                 position[j]=j
-    //                             }
-    //             else
-    //                             {
-    //                             // holder[j]='~'
-                                
-    //                             }
-
-    //     if(count===0)
-    //         {
-    //         // i=2+b.length;
-    //         i=2+b.length;
-    //         j=b.length;
-
-    //                             }
-                
-
-
-    // }
-
-    //     if(holder.toString()===tt)
-    //     console.log('you Won');
-
-    //     console.log(" The holder :"+holder)
-    //     // console.log(" The orignal :"+tt)
-    //     console.log(" Orignal : "+ c)
-    //     console.log(" Position : "+ position)
-    //     console.log(h)
-
-})
 
     // console.log(worldEnter.length);
     // for (let i=0;i<worldEnter.length;i++){
