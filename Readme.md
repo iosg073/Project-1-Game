@@ -63,16 +63,16 @@ mainBox.prepend(divwraper)
  ```
  ```javaScript 
  for(let i=0;i<worldEnter.length;i++)
-                            {
-                                if(worldEnter.indexOf(eventObj.target.textContent.toLowerCase())>-1)
-                                    {
-                                        tt=document.getElementsByClassName('inputHolder');
-                                        tt[worldEnter.indexOf(eventObj.target.textContent.toLowerCase())].innerHTML=eventObj.target.textContent.toLowerCase();
-                                        worldEnter=worldEnter.replace(eventObj.target.textContent.toLowerCase(), "%");
-                                        console.log(worldEnter);
-                                        c++;
-                                    }
-                            }
+     {
+        if(worldEnter.indexOf(eventObj.target.textContent.toLowerCase())>-1)
+        {
+         tt=document.getElementsByClassName('inputHolder');
+         tt[worldEnter.indexOf(eventObj.target.textContent.toLowerCase())].innerHTML=eventObj.target.textContent.toLowerCase();
+         worldEnter=worldEnter.replace(eventObj.target.textContent.toLowerCase(), "%");
+         console.log(worldEnter);
+         c++;
+         }
+    }
                      
  ```
 
