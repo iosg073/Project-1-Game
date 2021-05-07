@@ -218,12 +218,24 @@ document.getElementById('btnreset').addEventListener('click', function(){
     location.reload();   
 })
 
+document.getElementById('txtword').addEventListener('keydown', function(event)
+{
+    if(event.keyCode===13)
+    
+    {
+    // document.querySelector('.buttonDiv').style.display='none';
+    btnSubmit.click();
+    }
+})
+
+////////////////////////////Submit Button//////////////////////////
+
 
 btnSubmit.addEventListener('click', function()
     {
         event.preventDefault()
         domtxt=document.getElementById('txtword')
-        worldEnter=domtxt.value
+        worldEnter=domtxt.value.toLowerCase();
         w=worldEnter;
         domtxt.value=''
         domtxt.style.placeholder="Guess the word!"
@@ -239,6 +251,7 @@ btnSubmit.addEventListener('click', function()
         // txtboxDisap.style.display= 'none';
         btnBox=document.querySelector('.buttonDiv');
         btnBox.style.display= 'none';
+        document.getElementById('txtword').style.display='none';
         mainBox=document.querySelector('.mainarea');
         console.log(btnBox)
 
