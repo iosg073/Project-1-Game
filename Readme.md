@@ -75,7 +75,15 @@ mainBox.prepend(divwraper)
     }
                      
  ```
+# CSS Validator
 
+![Result](https://github.com/iosg073/Project-1-Game.github.io/blob/master/CSSValidator.PNG)
+
+# HTML Validator
+
+![Result](https://github.com/iosg073/Project-1-Game.github.io/blob/master/HTMLChecker.PNG)
+
+CSSValidator.PNG
  # Tecnologies used
  1. ## VS Code
  2. ## HTML
